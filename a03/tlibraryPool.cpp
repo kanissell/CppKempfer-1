@@ -32,6 +32,14 @@ void TLibraryPool::print()
         LibraryList.at(i)->print();
         printf("\n");
     }
+    cout << "Der Buecherverband hat " << CustomerList.size() << " Kunde/Kunden" << endl;
+    for(unsigned j = 0; j < LibraryList.size(); j++)
+    {
+        printf("\n");
+        CustomerList.at(j)->print();
+        printf("\n");
+    }
+
 }
 
 void TLibraryPool::setname(string n)
