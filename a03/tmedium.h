@@ -16,12 +16,12 @@ class TMedium
 
     public:
 
-
     void setTitel(string t);
     void setSignatur(string s);
     void setOrt(TLocation o);
     void setAltersfreigabe(int a);
     void setStatus(Status st);
+    void print();
 
     string getTitel();
     string getSignatur();
@@ -35,7 +35,6 @@ class TMedium
    // TMedium(string titel, string signatur, int Altersfreigabe, TMedium ::verfeugbar);
    // TMedium(string titel, string signatur, int Altersfreigabe,TMedium ::bestellt);
    // TMedium(string titel, string signatur, int Altersfreigabe,TMedium ::reseviert);
-    void print();
 
 
 

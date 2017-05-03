@@ -1,5 +1,5 @@
 #include "tlibraryPool.h"
-TLibraryPool::TLibraryPool(string n, TPerson* p)
+TLibraryPool::TLibraryPool(string n, TPerson* p): Boss(p)
 {
     Name = n;
     Boss = p;
@@ -21,9 +21,17 @@ void TLibraryPool::add(TLibrary* lib)
 
 void TLibraryPool::print()
 {
-   cout << getName() << endl;
-
-
+    printf("\n");
+    cout << getName() << endl;
+    cout << "Leitung" << endl;
+    Boss->print();
+    cout << "\nZum Buecherverband gehoeren " << LibraryList.size() << " Filialen" << endl;
+    for(unsigned i = 0; i < LibraryList.size(); i++)
+    {
+        printf("\n");
+        LibraryList.at(i)->print();
+        printf("\n");
+    }
 }
 
 void TLibraryPool::setname(string n)

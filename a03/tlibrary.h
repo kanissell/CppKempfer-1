@@ -24,6 +24,7 @@ class TLibrary
         void setAddress(TAddress a);
         void setManager(TPerson* m);
         void setMediumList(vector<TMedium*> val);
+        void print();
 
         string getName();
         TAddress getaddress();

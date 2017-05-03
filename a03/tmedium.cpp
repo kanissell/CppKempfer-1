@@ -81,7 +81,7 @@ void TMedium::print()
 {
     cout << "Titel: " << getTitel() << endl;
     cout << "Signatur: " << getSignatur() << endl;
-    o.print();
+    ort.print();
     cout << "FSK: freigegeben ab " << getAltersfreigabe() << " Jahren" << endl;
     cout << "Status: " << getStatus() << endl;
 

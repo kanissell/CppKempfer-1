@@ -1,7 +1,7 @@
 #include "tlibrary.h"
 #include "taddress.h"
 
-TLibrary::TLibrary(string name, TAddress address, TPerson* Person ):addresse(addresse)
+TLibrary::TLibrary(string name, TAddress address, TPerson* Person ):addresse(address), Manager(Person)
 {
   Name = name;
   addresse = address;
@@ -47,4 +47,20 @@ TPerson* TLibrary::getManager()
 vector <TMedium*> TLibrary::getMediumList()
 {
     return MediumList;
+}
+
+void TLibrary::print()
+{
+    cout << "Buecherei Filiale" << getName() << endl;
+    addresse.print();
+    cout << "Filialleister: " << endl;
+    Manager->print();
+    cout << "Es stehen " << MediumList.size() << " Medium/Medien zur Verfuegung:" << endl;
+    for(unsigned i = 0; i < MediumList.size(); i++)
+    {
+        printf("\n");
+        MediumList.at(i)->print();
+        printf("\n");
+    }
+
 }
